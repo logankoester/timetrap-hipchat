@@ -1,45 +1,52 @@
-= timetrap-hipchat
+# timetrap-hipchat
 
-home  :: FIX (url)
-code  :: FIX (url)
-rdoc  :: FIX (url)
-bugs  :: FIX (url)
-... etc ...
+`timetrap-hipchat` extends the popular
+[Timetrap](https://github.com/samg/timetrap) time tracker to notify a
+[Hipchat](https://hipchat.com) room any time you use the `in`, `out`, and
+`resume` commands.
 
-== DESCRIPTION:
+## Requirements
 
-FIX (describe your package)
+* Ruby
+* My [fork of Timetrap](https://github.com/logankoester/timetrap/tree/hooks)
+  (until **hook support** is accepted and released upstream)
+* A Hipchat API token
 
-== FEATURES/PROBLEMS:
+## Installation
 
-* FIX (list of features or problems)
+Once you've installed and configured my forked `timetrap` gem, install
+timetrap-hipchat.
 
-== SYNOPSIS:
+```bash
+$ gem install timetrap-hipchat
+```
 
-  FIX (code sample of usage)
+Then use the `timetrap-hipchat` command to add the relevant hooks to your
+sheets.
 
-== REQUIREMENTS:
+```bash
+$ timetrap-hipchat <sheet>
+```
 
-* FIX (list of requirements)
+**You're done!** Any time you run `timetrap [in|out|resume]`, the channel
+you configured will be notified.
 
-== INSTALL:
+## Contributing
 
-* FIX (sudo gem install, anything else)
+Clone this repo and then run...
 
-== DEVELOPERS:
-
-After checking out the source, run:
-
-  $ rake newb
+```bash
+$ rake newb
+```
 
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
 
-== LICENSE:
+## License
 
 (The MIT License)
 
-Copyright (c) 2014 FIX
+Copyright (c) 2014 Logan Koester
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

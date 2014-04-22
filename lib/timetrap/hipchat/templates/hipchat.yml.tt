@@ -1,0 +1,5 @@
+---
+hipchat:
+  token: '<%= @hipchat_token %>'
+  room: '<%= @hipchat_room %>'
+  display_name: '<%= @hipchat_display_name %>'

@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'timetrap'
+require 'hipchat'
+require 'thor'
+
+module Timetrap
+  module Hipchat
+    class CLI < Thor
+      include Thor::Actions
+
+      source_root File.join(File.dirname(__FILE__), '..', 'lib', 'timetrap', 'hipchat', 'templates')
+
+      desc 'install <sheet>', 'Install & configure for the specified sheet'
+      def install(sheet)
+        say "Configuring hipchat hooks for timetrap sheet #{sheet}", :green
+        @@destination_root = hooks_path(sheet)
+
+        @hipchat_token = ask 'HipChat API Token:'
+        @hipchat_room = ask 'HipChat Room Name:'
+        @hipchat_display_name = ask 'Your name:'
+
+        template 'hipchat.yml.tt', File.join(@@destination_root, 'hipchat.yml')
+        copy_file 'in.rb', File.join(@@destination_root, 'in.rb')
+        copy_file 'out.rb', File.join(@@destination_root, 'out.rb')
+        copy_file 'resume.rb', File.join(@@destination_root, 'resume.rb')
+
+        say 'All done!', :green
+      end
+
+      private
+      def hooks_path(sheet)
+        File.join Timetrap::Config['hooks_path'], sheet
+      end
+
+    end
+  end
+end
+
+Timetrap::Hipchat::CLI.start

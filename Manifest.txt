@@ -1,8 +1,10 @@
-.autotest
 History.txt
 Manifest.txt
-README.txt
+README.md
 Rakefile
-bin/timetrap/hipchat
+bin/timetrap-hipchat
+lib/timetrap/hipchat/templates/hipchat.yml.tt
+lib/timetrap/hipchat/templates/in.rb
+lib/timetrap/hipchat/templates/out.rb
+lib/timetrap/hipchat/templates/resume.rb
 lib/timetrap/hipchat.rb
-test/test_timetrap/hipchat.rb
