@@ -48,17 +48,6 @@ All done!
 **You're done!** Any time you run `timetrap [in|out|resume]`, the channel
 you configured will be notified.
 
-## Contributing
-
-Clone this repo and then run...
-
-```bash
-$ rake newb
-```
-
-This task will install any missing dependencies, run the tests/specs,
-and generate the RDoc.
-
 ## License
 
 (The MIT License)
