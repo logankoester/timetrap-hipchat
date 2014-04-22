@@ -23,11 +23,13 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "bin/timetrap-hipchat",
+    "demo.png",
     "lib/timetrap/hipchat.rb",
     "lib/timetrap/hipchat/templates/hipchat.yml.tt",
     "lib/timetrap/hipchat/templates/in.rb",
     "lib/timetrap/hipchat/templates/out.rb",
-    "lib/timetrap/hipchat/templates/resume.rb"
+    "lib/timetrap/hipchat/templates/resume.rb",
+    "timetrap-hipchat.gemspec"
   ]
   s.homepage = "https://github.com/logankoester/timetrap-hipchat"
   s.licenses = ["MIT"]
