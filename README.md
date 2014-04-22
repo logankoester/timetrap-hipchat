@@ -1,13 +1,13 @@
 # timetrap-hipchat
 
-`timetrap-hipchat` extends the popular
+This Ruby gem extends the popular
 [Timetrap](https://github.com/samg/timetrap) time tracker to notify a
 [Hipchat](https://hipchat.com) room any time you use the `in`, `out`, and
 `resume` commands.
 
 ## Requirements
 
-* Ruby
+* Ruby 1.9+
 * My [fork of Timetrap](https://github.com/logankoester/timetrap/tree/hooks)
   (until **hook support** is accepted and released upstream)
 * A Hipchat API token
@@ -26,6 +26,21 @@ sheets.
 
 ```bash
 $ timetrap-hipchat <sheet>
+```
+
+Example...
+
+```bash
+$ timetrap-hipchat install example
+Configuring hipchat hooks for timetrap sheet example
+HipChat API Token: YOUR_TOKEN
+HipChat Room Name: YOUR_ROOM
+Your name: Your Name
+      create  /home/ldk/.timetrap/hooks/example/hipchat.yml
+      create  /home/ldk/.timetrap/hooks/example/in.rb
+      create  /home/ldk/.timetrap/hooks/example/out.rb
+      create  /home/ldk/.timetrap/hooks/example/resume.rb
+All done!
 ```
 
 **You're done!** Any time you run `timetrap [in|out|resume]`, the channel
