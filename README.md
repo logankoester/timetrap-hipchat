@@ -5,6 +5,8 @@ This Ruby gem extends the popular
 [Hipchat](https://hipchat.com) room any time you use the `in`, `out`, and
 `resume` commands.
 
+![Example](https://raw.githubusercontent.com/logankoester/timetrap-hipchat/master/demo.png)
+
 ## Requirements
 
 * Ruby 1.9+
