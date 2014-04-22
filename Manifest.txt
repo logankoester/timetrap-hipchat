@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/timetrap/hipchat
+lib/timetrap/hipchat.rb
+test/test_timetrap/hipchat.rb
