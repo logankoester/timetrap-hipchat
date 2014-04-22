@@ -2,8 +2,6 @@ require 'hipchat'
 
 module Timetrap
   class Hipchat
-    VERSION = '1.0.0'
-
     include Timetrap::Helpers
 
     def initialize(api_token, room, user)
